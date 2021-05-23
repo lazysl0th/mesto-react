@@ -1,0 +1,13 @@
+.popup_type_form {
+  grid-template-columns: repeat(1, minmax(max-content, 430px));
+  grid-template-rows: repeat(2, max-content);
+  background-color: rgba(0, 0, 0, 0.5);
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+}
+
+@media screen and (max-width: 510px) {
+  .popup_type_form {
+    grid-template-columns: repeat(1, minmax(max-content, calc(100% - 19px * 2)));
+  }
+}

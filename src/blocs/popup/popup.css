@@ -1,0 +1,31 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(max-content, 430px));
+  grid-template-areas:
+  ". popup__button-cancel"
+  "popup__content .";
+  justify-content: center;
+  align-content: center;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+@media screen and (max-width: 510px) {
+  .popup {
+    row-gap: 16px;
+    grid-template-areas:
+    "popup__button-cancel"
+    "popup__content";
+    justify-items: center;
+  }
+}
+
