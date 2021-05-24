@@ -18,7 +18,7 @@
 
 Используемые технологии HTML5, CSS3, JS, JSX, REACT.
 
-Ссылка на проект: 
+Ссылка на проект: https://lazysl0th.github.io/mesto-react/
 
 ## Available Scripts
 
