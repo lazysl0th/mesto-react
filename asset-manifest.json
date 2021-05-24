@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.32186318.chunk.css",
-    "main.js": "/static/js/main.4a7a5082.chunk.js",
-    "main.js.map": "/static/js/main.4a7a5082.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ab44c2ff.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ab44c2ff.js.map",
-    "static/js/2.f4132e11.chunk.js": "/static/js/2.f4132e11.chunk.js",
-    "static/js/2.f4132e11.chunk.js.map": "/static/js/2.f4132e11.chunk.js.map",
-    "static/js/3.c5d2a098.chunk.js": "/static/js/3.c5d2a098.chunk.js",
-    "static/js/3.c5d2a098.chunk.js.map": "/static/js/3.c5d2a098.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.32186318.chunk.css.map": "/static/css/main.32186318.chunk.css.map",
-    "static/js/2.f4132e11.chunk.js.LICENSE.txt": "/static/js/2.f4132e11.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/button-like_active.8dfd9f22.svg",
-    "static/media/logo.b59368db.svg": "/static/media/logo.b59368db.svg"
+    "main.css": "/mesto-react/static/css/main.b35908ad.chunk.css",
+    "main.js": "/mesto-react/static/js/main.4a7a5082.chunk.js",
+    "main.js.map": "/mesto-react/static/js/main.4a7a5082.chunk.js.map",
+    "runtime-main.js": "/mesto-react/static/js/runtime-main.b170f004.js",
+    "runtime-main.js.map": "/mesto-react/static/js/runtime-main.b170f004.js.map",
+    "static/js/2.f4132e11.chunk.js": "/mesto-react/static/js/2.f4132e11.chunk.js",
+    "static/js/2.f4132e11.chunk.js.map": "/mesto-react/static/js/2.f4132e11.chunk.js.map",
+    "static/js/3.c5d2a098.chunk.js": "/mesto-react/static/js/3.c5d2a098.chunk.js",
+    "static/js/3.c5d2a098.chunk.js.map": "/mesto-react/static/js/3.c5d2a098.chunk.js.map",
+    "index.html": "/mesto-react/index.html",
+    "static/css/main.b35908ad.chunk.css.map": "/mesto-react/static/css/main.b35908ad.chunk.css.map",
+    "static/js/2.f4132e11.chunk.js.LICENSE.txt": "/mesto-react/static/js/2.f4132e11.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/mesto-react/static/media/button-like_active.8dfd9f22.svg",
+    "static/media/logo.b59368db.svg": "/mesto-react/static/media/logo.b59368db.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ab44c2ff.js",
+    "static/js/runtime-main.b170f004.js",
     "static/js/2.f4132e11.chunk.js",
-    "static/css/main.32186318.chunk.css",
+    "static/css/main.b35908ad.chunk.css",
     "static/js/main.4a7a5082.chunk.js"
   ]
 }
