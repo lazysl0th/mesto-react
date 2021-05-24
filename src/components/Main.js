@@ -13,11 +13,11 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick}) {
     const initialCardsPromise = api.getInitialCards();
 
     Promise.all([informationAboutUserPromise, initialCardsPromise])
-      .then((result) => {
-        setUserName(result[0].name);
-        setUserDescription(result[0].about);
-        setUserAvatar(result[0].avatar);
-        setCards(result[1]);
+      .then(([userData, cards]) => {
+        setUserName(userData.name);
+        setUserDescription(userData.about);
+        setUserAvatar(userData.avatar);
+        setCards(cards);
       })
       .catch((error) => (console.log(error)));
     }, [])
@@ -26,7 +26,7 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick}) {
     <main className="content">
       <section className="profile">
         <button type="button" name="button-edit-avatar" className="profile__button-edit-avatar" onClick={onEditAvatar}>
-          <div class="profile__edit-avatar-icon"></div>
+          <div className="profile__edit-avatar-icon"></div>
           <img className="profile__avatar" src={userAvatar} alt="Аватар"/>
         </button>
         <div className="profile__info">
