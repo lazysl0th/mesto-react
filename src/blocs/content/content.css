@@ -1,0 +1,26 @@
+.content {
+  padding: 37px 0 67px;
+  flex-basis: calc(100% - 200px * 2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1045px) {
+  .content {
+    flex-basis: calc(100% - 100px * 2);
+  }
+}
+
+@media screen and (max-width: 866px) {
+  .content {
+    flex-basis: calc(100% - 50px * 2);
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .content {
+    flex-basis: calc(100% - 19px * 2);
+    padding-bottom: 48px;
+  }
+}

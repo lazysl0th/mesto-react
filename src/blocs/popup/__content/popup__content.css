@@ -1,0 +1,7 @@
+.popup__content {
+  margin: 0;
+  grid-area: popup__content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
