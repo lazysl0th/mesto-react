@@ -6,7 +6,8 @@ import Main from './Main';
 import PopupWithForm from './PopupWithForm';
 import ImagePopup from './ImagePopup';
 import Footer from './Footer';
-import EditProfilePopUp from './EditProfilePopup';
+import EditProfilePopup from './EditProfilePopup';
+import EditAvatarPopup from './EditAvatarPopup';
 
 
 function App() {
@@ -58,6 +59,14 @@ function App() {
       .catch((error) => (console.log(error)));
   }
 
+  function handleUpdateAvatar({link}) {
+    api.updateAvatar({link})
+      .then((userData) => {
+        setCurrentUser(userData);
+      })
+      .catch((error) => (console.log(error)));
+  }
+
   return (
     <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
@@ -68,24 +77,9 @@ function App() {
           onAddPlace={handleAddPlaceClick}
           onCardClick={handleCardClick}/>
 
-        <PopupWithForm
-          title='Обновить аватар'
-          name='form_update-avatar'
-          textButtonSubmit='Сохранить'
-          isOpen={isEditAvatarPopupOpen}
-          onClose={closeAllPopups} >
-            <input
-              type="url"
-              name="link"
-              id="link-avatar-input"
-              className="popup__item popup__item_link"
-              placeholder="Ссылка на аватар"
-              required />
-            <span
-              className="popup__error link-avatar-input-error"></span>
-        </PopupWithForm>
+        <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} onUpdateAvatar={handleUpdateAvatar} />
 
-        <EditProfilePopUp isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onUpdateUser={handleUpdateUser} />
+        <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onUpdateUser={handleUpdateUser} />
 
         <PopupWithForm
           title='Новое место'
