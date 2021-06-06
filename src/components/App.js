@@ -6,6 +6,7 @@ import Main from './Main';
 import PopupWithForm from './PopupWithForm';
 import ImagePopup from './ImagePopup';
 import Footer from './Footer';
+import EditProfilePopUp from './EditProfilePopup';
 
 
 function App() {
@@ -23,15 +24,6 @@ function App() {
         setCurrentUser(userData);
       })
       .catch((error) => (console.log(error)));
-
-    /*Promise.all([informationAboutUserPromise, initialCardsPromise])
-      .then(([userData, cards]) => {
-        setUserName(userData.name);
-        setUserDescription(userData.about);
-        setUserAvatar(userData.avatar);
-        setCards(cards);
-      })
-      .catch((error) => (console.log(error)));*/
     }, [])
 
 
@@ -56,6 +48,14 @@ function App() {
 
   function handleCardClick (card) {
     setSelectedCard(card);
+  }
+
+  function handleUpdateUser({name, about}) {
+    api.editInformationAboutUser({name, about})
+      .then((userData) => {
+        setCurrentUser(userData);
+      })
+      .catch((error) => (console.log(error)));
   }
 
   return (
@@ -85,35 +85,7 @@ function App() {
               className="popup__error link-avatar-input-error"></span>
         </PopupWithForm>
 
-        <PopupWithForm
-          title='Редактировать профиль'
-          name='form_edit-profile'
-          textButtonSubmit='Сохранить'
-          isOpen={isEditProfilePopupOpen}
-          onClose={closeAllPopups} >
-            <input
-              type="text"
-              name="name"
-              id="name-profile-input"
-              className="popup__item popup__item_name"
-              placeholder=""
-              minLength="2"
-              maxLength="40"
-              required/>
-            <span
-              className="popup__error name-profile-input-error"></span>
-            <input
-              type="text"
-              name="about"
-              id="about-input"
-              className="popup__item popup__item_about"
-              placeholder=""
-              minLength="2"
-              maxLength="200"
-              required/>
-            <span
-              className="popup__error about-input-error"></span>
-        </PopupWithForm>
+        <EditProfilePopUp isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onUpdateUser={handleUpdateUser} />
 
         <PopupWithForm
           title='Новое место'
