@@ -66,6 +66,7 @@ function App() {
     api.editInformationAboutUser({name, about})
       .then((userData) => {
         setCurrentUser(userData);
+        closeAllPopups();
       })
       .catch((error) => (console.log(error)));
   }
@@ -74,6 +75,7 @@ function App() {
     api.updateAvatar({link})
       .then((userData) => {
         setCurrentUser(userData);
+        closeAllPopups();
       })
       .catch((error) => (console.log(error)));
   }
@@ -100,6 +102,7 @@ function App() {
     api.addCard({name, link})
       .then((newCard) => {
         setCards([newCard, ...cards]);
+        closeAllPopups();
       })
       .catch((error) => (console.log(error)));
   }
